@@ -1,0 +1,7 @@
+version: '3'
+services:
+  gitpitch:
+    image: swaggerapi/swagger-ui
+    container_name: Local_Swagger_UI
+    ports:
+      - 8082:8080

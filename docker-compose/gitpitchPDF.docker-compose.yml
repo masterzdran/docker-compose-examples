@@ -1,0 +1,12 @@
+version: '3'
+services:
+  gitpitch:
+    image: knsit/gitpitch-pdf:latest
+    environment:
+      - GP_HOST=192.168.2.26
+      - GP_GITLAB_BASE=https://gitlab.com/
+      - GP_GITLAB_API=https://gitlab.com/api/v4/
+      - GP_GITLAB_AS_DEFAULT=true
+      - GP_GITLAB_ACCESS_TOKEN=D5iwqQATzqv1rjsPHtff
+    ports:
+      - 9900:9000

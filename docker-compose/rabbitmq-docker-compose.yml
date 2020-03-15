@@ -1,0 +1,27 @@
+version: '3'
+
+services:
+  
+  rabbitmq_service:
+    image: 'rabbitmq:3.8.2-management'
+    container_name: rabbitmq_service
+    environment:
+      RABBITMQ_ERLANG_COOKIE: "SWQOKODSQALRPCLNMEQG"
+      RABBITMQ_DEFAULT_USER: "rabbitmq"
+      RABBITMQ_DEFAULT_PASS: "rabbitmq"
+      RABBITMQ_DEFAULT_VHOST: "/"
+    ports:
+      # AMQP protocol port
+      - '5672:5672'
+      # HTTP management UI
+      - '15672:15672'
+    networks:
+      - rabbitmq_service_network
+
+
+
+networks:
+  # Declare our private network.  We must declare one for the magic
+  # Docker DNS to work, but otherwise its default settings are fine.
+  rabbitmq_service_network: 
+    driver: bridge

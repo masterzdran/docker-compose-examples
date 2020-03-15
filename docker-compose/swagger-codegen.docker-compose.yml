@@ -1,0 +1,11 @@
+version: '3'
+services:
+  gitpitch:
+    image: swaggerapi/swagger-generator
+    container_name: Local_Swagger_Codegen
+    environment: 
+      - GENERATOR_HOST=http://192.168.2.26
+    ports:
+      - 8081:8080
+
+

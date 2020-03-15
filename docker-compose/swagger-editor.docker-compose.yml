@@ -1,0 +1,7 @@
+version: '3'
+services:
+  gitpitch:
+    image: swaggerapi/swagger-editor
+    container_name: Local_Swagger_Editor
+    ports:
+      - 8080:8080
